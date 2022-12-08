@@ -29,8 +29,9 @@ def delete_checkbox():
             return False
     except:
         return False
+    finally:
+        browser.quit()
 
-    browser.quit()
     return result
 
 
@@ -60,7 +61,9 @@ def remove_checkbox():
             result = False
     except:
         return False
-    browser.quit()
+    finally:
+        browser.quit()
+
     return result
 
 

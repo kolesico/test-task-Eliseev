@@ -13,8 +13,9 @@ def check_button():
         button = browser.find_element(By.TAG_NAME, "button")
     except:
         return False
+    finally:
+        browser.quit()
 
-    browser.quit()
     return bool(button)
 
 
@@ -28,8 +29,9 @@ def add_one_element():
         added_elements = browser.find_elements(By.CLASS_NAME, "added-manually")
     except:
         return False
+    finally:
+        browser.quit()
 
-    browser.quit()
     return len(added_elements)
 
 
@@ -45,8 +47,9 @@ def delete_one_element():
         deleted_elements = browser.find_elements(By.CLASS_NAME, "added-manually")
     except:
         return False
+    finally:
+        browser.quit()
 
-    browser.quit()
     return len(deleted_elements)
 
 
@@ -61,8 +64,9 @@ def add_ten_elements():
         added_elements = browser.find_elements(By.CLASS_NAME, "added-manually")
     except:
         return False
+    finally:
+        browser.quit()
 
-    browser.quit()
     return len(added_elements)
 
 
@@ -80,8 +84,9 @@ def delete_ten_elements():
         delete_element = browser.find_elements(By.CLASS_NAME, "added-manually")
     except:
         return False
+    finally:
+        browser.quit()
 
-    browser.quit()
     return len(delete_element)
 
 
@@ -96,8 +101,9 @@ def add_more_elements():
         added_elements = browser.find_elements(By.CLASS_NAME, "added-manually")
     except:
         return False
+    finally:
+        browser.quit()
 
-    browser.quit()
     return len(added_elements)
 
 
